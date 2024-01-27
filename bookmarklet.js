@@ -24,6 +24,21 @@ function SurveyHelpers(myInfo, settings) {
   // 設定項目
   const loop = settings.loop || 5; // 親要素を遡る階層数
 
+  // 初めはランダム選択
+  const formElements = {};
+  [].forEach.call(document.querySelectorAll("[type=radio],[type=checkbox]"), element => {
+    if (element.name) {
+      if (typeof formElements[element.name] === 'undefined') {
+        formElements[element.name] = [];
+      }
+      formElements[element.name].push(element);
+    }
+  });
+  Object.keys(formElements).forEach(name => {
+    const randomIndex = Math.floor(Math.random() * formElements[name].length);
+    formElements[name][randomIndex].click();
+  });
+
   // セレクトボックス選択
   // --------------------------------------------------------------------------------
 
