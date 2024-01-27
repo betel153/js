@@ -5,12 +5,10 @@
  * @author Neo http://neo.s21.xrea.com/
  */
 function SurveyHelpers(myInfo, settings) {
-  console.log("a");
   // 引数未指定の場合は中止する
   if (!myInfo || !settings) {
     return;
   }
-  console.log("b");
   // 個人情報
   const cityName = myInfo.cityName || "都道府県"; // 都道府県 : 「都道府県」は書かない
   const districtName = myInfo.districtName || "行政区"; // 行政区 : 東京23区用・「区」は書かない
