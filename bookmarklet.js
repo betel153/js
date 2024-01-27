@@ -1,66 +1,66 @@
 /**
- * @title ƒAƒ“ƒP[ƒg‰ñ“šƒuƒbƒNƒ}[ƒNƒŒƒbƒg
- * @description ƒAƒ“ƒP[ƒg‚ðŽ©“®‰ñ“š‚·‚éƒuƒbƒNƒ}[ƒNƒŒƒbƒg
+ * @title ã‚¢ãƒ³ã‚±ãƒ¼ãƒˆå›žç­”ãƒ–ãƒƒã‚¯ãƒžãƒ¼ã‚¯ãƒ¬ãƒƒãƒˆ
+ * @description ã‚¢ãƒ³ã‚±ãƒ¼ãƒˆã‚’è‡ªå‹•å›žç­”ã™ã‚‹ãƒ–ãƒƒã‚¯ãƒžãƒ¼ã‚¯ãƒ¬ãƒƒãƒˆ
  * @license MIT License
  * @author Neo http://neo.s21.xrea.com/
  */
 function SurveyHelpers(myInfo, settings) {
   console.log("a");
-  // ˆø”–¢Žw’è‚Ìê‡‚Í’†Ž~‚·‚é
+  // å¼•æ•°æœªæŒ‡å®šã®å ´åˆã¯ä¸­æ­¢ã™ã‚‹
   if (!myInfo || !settings) {
     return;
   }
   console.log("b");
-  // ŒÂlî•ñ
-  const cityName = myInfo.cityName || "“s“¹•{Œ§"; // “s“¹•{Œ§ : u“s“¹•{Œ§v‚Í‘‚©‚È‚¢
-  const districtName = myInfo.districtName || "s­‹æ"; // s­‹æ : “Œ‹ž23‹æ—pEu‹æv‚Í‘‚©‚È‚¢
-  const age = myInfo.age || 999; // ”N—î
-  const ageRange = myInfo.ageRange || 999; // ”N—î‘w : u20‘ãv‚Æ‚©u20`29Îv‚Æ‚©‚Ì‘I‘ðŽˆ—p
-  const birthYear = myInfo.birthYear || 9999; // ’a¶”N
-  const birthMonth = myInfo.birthMonth || 13; // ’a¶ŒŽ
-  const birthDate = myInfo.birthDate || 32; // ’a¶“ú
-  const gender = myInfo.gender || "«•Ê"; // «•Ê : '’j' ‚© '—' ‚ ‚½‚è‚ð‘z’è
-  const marriage = myInfo.marriage || "¥ˆ÷ó‘Ô"; // ¥ˆ÷ó‘Ô : '–¢¥' ‚© 'Šù¥' ‚ ‚½‚è‚ð‘z’è
-  const jobRegExp = myInfo.jobRegExp || "E‹Æ"; // E‹Æ : ³‹K•\Œ» "()" ‚ÅˆÍ‚ñ‚Å OR ŒŸõ‚·‚é‚Ì‚Å "|" ‚Å‹æØ‚é
+  // å€‹äººæƒ…å ±
+  const cityName = myInfo.cityName || "éƒ½é“åºœçœŒ"; // éƒ½é“åºœçœŒ : ã€Œéƒ½é“åºœçœŒã€ã¯æ›¸ã‹ãªã„
+  const districtName = myInfo.districtName || "è¡Œæ”¿åŒº"; // è¡Œæ”¿åŒº : æ±äº¬23åŒºç”¨ãƒ»ã€ŒåŒºã€ã¯æ›¸ã‹ãªã„
+  const age = myInfo.age || 999; // å¹´é½¢
+  const ageRange = myInfo.ageRange || 999; // å¹´é½¢å±¤ : ã€Œ20ä»£ã€ã¨ã‹ã€Œ20ï½ž29æ­³ã€ã¨ã‹ã®é¸æŠžè‚¢ç”¨
+  const birthYear = myInfo.birthYear || 9999; // èª•ç”Ÿå¹´
+  const birthMonth = myInfo.birthMonth || 13; // èª•ç”Ÿæœˆ
+  const birthDate = myInfo.birthDate || 32; // èª•ç”Ÿæ—¥
+  const gender = myInfo.gender || "æ€§åˆ¥"; // æ€§åˆ¥ : 'ç”·' ã‹ 'å¥³' ã‚ãŸã‚Šã‚’æƒ³å®š
+  const marriage = myInfo.marriage || "å©šå§»çŠ¶æ…‹"; // å©šå§»çŠ¶æ…‹ : 'æœªå©š' ã‹ 'æ—¢å©š' ã‚ãŸã‚Šã‚’æƒ³å®š
+  const jobRegExp = myInfo.jobRegExp || "è·æ¥­"; // è·æ¥­ : æ­£è¦è¡¨ç¾ "()" ã§å›²ã‚“ã§ OR æ¤œç´¢ã™ã‚‹ã®ã§ "|" ã§åŒºåˆ‡ã‚‹
 
-  // Ý’è€–Ú
-  const loop = settings.loop || 5; // e—v‘f‚ð‘k‚éŠK‘w”
+  // è¨­å®šé …ç›®
+  const loop = settings.loop || 5; // è¦ªè¦ç´ ã‚’é¡ã‚‹éšŽå±¤æ•°
 
-  // ƒZƒŒƒNƒgƒ{ƒbƒNƒX‘I‘ð
+  // ã‚»ãƒ¬ã‚¯ãƒˆãƒœãƒƒã‚¯ã‚¹é¸æŠž
   // --------------------------------------------------------------------------------
 
-  // ƒZƒŒƒNƒgƒ{ƒbƒNƒX‚ÅŽg—p‚·‚éðŒ‚Ü‚Æ‚ß
+  // ã‚»ãƒ¬ã‚¯ãƒˆãƒœãƒƒã‚¯ã‚¹ã§ä½¿ç”¨ã™ã‚‹æ¡ä»¶ã¾ã¨ã‚
   const optionConditions = {
-    // ZŠ‚©”N—î‚©’a¶“ú
+    // ä½æ‰€ã‹å¹´é½¢ã‹èª•ç”Ÿæ—¥
     something: new RegExp(
       cityName +
         "|" +
         districtName +
         "|" +
         age +
-        ".*[Î|Ë]" +
+        ".*[æ­³|æ‰]" +
         "|" +
         birthYear +
         "|" +
         birthMonth +
-        ".*ŒŽ" +
+        ".*æœˆ" +
         "|" +
         birthDate +
-        ".*“ú"
+        ".*æ—¥"
     ),
   };
 
-  // select —v‘f‚ð’Tõ‚·‚é
+  // select è¦ç´ ã‚’æŽ¢ç´¢ã™ã‚‹
   Array.prototype.forEach.call(
     document.querySelectorAll("select"),
     (select) => {
-      // ‚»‚Ì select —v‘f“à‚Ì option —v‘f‚Å’Tõ‚ªI‚í‚Á‚½ê‡‚Íˆ—‚ð’†’f‚·‚é‚½‚ß‚Ìƒtƒ‰ƒO
+      // ãã® select è¦ç´ å†…ã® option è¦ç´ ã§æŽ¢ç´¢ãŒçµ‚ã‚ã£ãŸå ´åˆã¯å‡¦ç†ã‚’ä¸­æ–­ã™ã‚‹ãŸã‚ã®ãƒ•ãƒ©ã‚°
       let finished = false;
 
       Array.prototype.forEach.call(
         select.querySelectorAll("option"),
         (option) => {
-          // ‚±‚Ì select —v‘f‚ª’TõÏ‚È‚ç’†’f‚·‚é
+          // ã“ã® select è¦ç´ ãŒæŽ¢ç´¢æ¸ˆãªã‚‰ä¸­æ–­ã™ã‚‹
           if (finished) {
             return;
           }
@@ -68,36 +68,36 @@ function SurveyHelpers(myInfo, settings) {
           const innerHTML = option.innerHTML;
 
           if (optionConditions.something.test(innerHTML)) {
-            // ‚¢‚¸‚ê‚©‚Ìî•ñ‚É‡’v‚µ‚½‚ç option —v‘f‚ð‘I‘ð‚·‚é
+            // ã„ãšã‚Œã‹ã®æƒ…å ±ã«åˆè‡´ã—ãŸã‚‰ option è¦ç´ ã‚’é¸æŠžã™ã‚‹
             option.selected = true;
             finished = true;
           } else if (/1|2/.test(innerHTML)) {
-            // 1 ‚© 2 ‚ªŠÜ‚Ü‚ê‚Ä‚¢‚½‚çŒŽ‚©“ú‚ÌƒZƒŒƒNƒgƒ{ƒbƒNƒX‚Æ—\‘z‚µ‚Äˆ—‚·‚é
+            // 1 ã‹ 2 ãŒå«ã¾ã‚Œã¦ã„ãŸã‚‰æœˆã‹æ—¥ã®ã‚»ãƒ¬ã‚¯ãƒˆãƒœãƒƒã‚¯ã‚¹ã¨äºˆæƒ³ã—ã¦å‡¦ç†ã™ã‚‹
             let isMonth = false;
             let isDate = false;
 
-            // ‚»‚Ì option —v‘f‚ªŠ‘®‚·‚é select —v‘f‚ð‘S’Tõ‚µ‚ÄAƒZƒŒƒNƒgƒ{ƒbƒNƒX‚ªŒŽ‚©“ú‚ÌƒZƒŒƒNƒgƒ{ƒbƒNƒX‚©‚Ç‚¤‚©”»’è‚·‚é
+            // ãã® option è¦ç´ ãŒæ‰€å±žã™ã‚‹ select è¦ç´ ã‚’å…¨æŽ¢ç´¢ã—ã¦ã€ã‚»ãƒ¬ã‚¯ãƒˆãƒœãƒƒã‚¯ã‚¹ãŒæœˆã‹æ—¥ã®ã‚»ãƒ¬ã‚¯ãƒˆãƒœãƒƒã‚¯ã‚¹ã‹ã©ã†ã‹åˆ¤å®šã™ã‚‹
             Array.prototype.forEach.call(
               select.querySelectorAll("option"),
               (selectOption) => {
                 const selectOptionInnerHTML = selectOption.innerHTML;
 
                 if (selectOptionInnerHTML.includes(12)) {
-                  // 12 ‚ðŠÜ‚Þ‘I‘ðŽˆ‚ª‚ ‚ê‚ÎuŒŽvƒZƒŒƒNƒgƒ{ƒbƒNƒX‚Æ—\‘z‚·‚é
+                  // 12 ã‚’å«ã‚€é¸æŠžè‚¢ãŒã‚ã‚Œã°ã€Œæœˆã€ã‚»ãƒ¬ã‚¯ãƒˆãƒœãƒƒã‚¯ã‚¹ã¨äºˆæƒ³ã™ã‚‹
                   isMonth = true;
                 } else if (selectOptionInnerHTML.includes(13)) {
-                  // 13 ‚ðŠÜ‚Þ‘I‘ðŽˆ‚ª‚ ‚ê‚ÎuŒŽv‚Å‚Í‚È‚­u“úvƒZƒŒƒNƒgƒ{ƒbƒNƒX‚Æ—\‘z‚·‚é
+                  // 13 ã‚’å«ã‚€é¸æŠžè‚¢ãŒã‚ã‚Œã°ã€Œæœˆã€ã§ã¯ãªãã€Œæ—¥ã€ã‚»ãƒ¬ã‚¯ãƒˆãƒœãƒƒã‚¯ã‚¹ã¨äºˆæƒ³ã™ã‚‹
                   isMonth = false;
                   isDate = true;
                 } else if (selectOptionInnerHTML.includes(32)) {
-                  // 32 ‚ðŠÜ‚Þ‘I‘ðŽˆ‚ª‚ ‚ê‚ÎuŒŽv‚Å‚àu“úv‚Å‚à‚È‚¢ (“s“¹•{Œ§ƒZƒŒƒNƒgƒ{ƒbƒNƒX‚È‚Ç‚Ì€”Ô‚Æ”»’è)
+                  // 32 ã‚’å«ã‚€é¸æŠžè‚¢ãŒã‚ã‚Œã°ã€Œæœˆã€ã§ã‚‚ã€Œæ—¥ã€ã§ã‚‚ãªã„ (éƒ½é“åºœçœŒã‚»ãƒ¬ã‚¯ãƒˆãƒœãƒƒã‚¯ã‚¹ãªã©ã®é …ç•ªã¨åˆ¤å®š)
                   isMonth = false;
                   isDate = false;
                 }
               }
             );
 
-            // uŒŽvƒZƒŒƒNƒgƒ{ƒbƒNƒX‚à‚µ‚­‚Íu“úvƒZƒŒƒNƒgƒ{ƒbƒNƒX‚Æ—\‘z‚µ‚½Žž‚É‘ÎÛ‚Ì option —v‘f‚ð‘I‘ð‚·‚é
+            // ã€Œæœˆã€ã‚»ãƒ¬ã‚¯ãƒˆãƒœãƒƒã‚¯ã‚¹ã‚‚ã—ãã¯ã€Œæ—¥ã€ã‚»ãƒ¬ã‚¯ãƒˆãƒœãƒƒã‚¯ã‚¹ã¨äºˆæƒ³ã—ãŸæ™‚ã«å¯¾è±¡ã® option è¦ç´ ã‚’é¸æŠžã™ã‚‹
             if (
               (isMonth && innerHTML.includes(birthMonth)) ||
               (isDate && innerHTML.includes(birthDate))
@@ -111,40 +111,40 @@ function SurveyHelpers(myInfo, settings) {
     }
   );
 
-  // ƒeƒLƒXƒgƒ{ƒbƒNƒX“ü—Í
+  // ãƒ†ã‚­ã‚¹ãƒˆãƒœãƒƒã‚¯ã‚¹å…¥åŠ›
   // --------------------------------------------------------------------------------
 
-  // Type ‚ª text ‚© tel ‚Ì—v‘f‚ð’Tõ‚·‚é
+  // Type ãŒ text ã‹ tel ã®è¦ç´ ã‚’æŽ¢ç´¢ã™ã‚‹
   Array.prototype.forEach.call(
     document.querySelectorAll("[type=text],[type=tel]"),
     (textbox) => {
-      // e—v‘f‚É‘k‚Á‚Ä‚¢‚­‚½‚ß‚Ì•Ï”
+      // è¦ªè¦ç´ ã«é¡ã£ã¦ã„ããŸã‚ã®å¤‰æ•°
       let parent = textbox;
-      // e—v‘f‚ð‘k‚Á‚Ä‚Ì’Tõ‚ªÏ‚ñ‚Å‚¢‚é‚±‚Æ‚ðŽ¦‚·ƒtƒ‰ƒO
+      // è¦ªè¦ç´ ã‚’é¡ã£ã¦ã®æŽ¢ç´¢ãŒæ¸ˆã‚“ã§ã„ã‚‹ã“ã¨ã‚’ç¤ºã™ãƒ•ãƒ©ã‚°
       let finished = false;
 
-      // e—v‘f‚ð‘k‚é
+      // è¦ªè¦ç´ ã‚’é¡ã‚‹
       for (let i = 0; i < loop; i++) {
-        // ’TõÏ‚È‚ç’†’f‚·‚é
+        // æŽ¢ç´¢æ¸ˆãªã‚‰ä¸­æ–­ã™ã‚‹
         if (finished) {
           continue;
         }
 
-        // e—v‘f‚Ì innerHTML ‚ðŽæ“¾‚·‚é
+        // è¦ªè¦ç´ ã® innerHTML ã‚’å–å¾—ã™ã‚‹
         parent = parent.parentNode;
         const innerHTML = parent.innerHTML;
 
-        // e—v‘f‚Ì innerHTML ‚©‚ç‚»‚ê‚ç‚µ‚¢•¶Œ¾‚ðŒ©•t‚¯‚½‚ç‘Î‰ž‚·‚é’l‚ðÝ’è‚·‚é
-        if (/Î|Ë/.test(innerHTML)) {
+        // è¦ªè¦ç´ ã® innerHTML ã‹ã‚‰ãã‚Œã‚‰ã—ã„æ–‡è¨€ã‚’è¦‹ä»˜ã‘ãŸã‚‰å¯¾å¿œã™ã‚‹å€¤ã‚’è¨­å®šã™ã‚‹
+        if (/æ­³|æ‰/.test(innerHTML)) {
           textbox.value = age;
           finished = true;
-        } else if (innerHTML.includes("”N")) {
+        } else if (innerHTML.includes("å¹´")) {
           textbox.value = birthYear;
           finished = true;
-        } else if (innerHTML.includes("ŒŽ")) {
+        } else if (innerHTML.includes("æœˆ")) {
           textbox.value = birthMonth;
           finished = true;
-        } else if (innerHTML.includes("“ú")) {
+        } else if (innerHTML.includes("æ—¥")) {
           textbox.value = birthDate;
           finished = true;
         }
@@ -152,12 +152,12 @@ function SurveyHelpers(myInfo, settings) {
     }
   );
 
-  // ƒ‰ƒWƒIƒ{ƒ^ƒ“‘I‘ð
+  // ãƒ©ã‚¸ã‚ªãƒœã‚¿ãƒ³é¸æŠž
   // --------------------------------------------------------------------------------
 
-  // ƒ‰ƒWƒIƒ{ƒ^ƒ“‚ÅŽg—p‚·‚éðŒ‚Ü‚Æ‚ß
+  // ãƒ©ã‚¸ã‚ªãƒœã‚¿ãƒ³ã§ä½¿ç”¨ã™ã‚‹æ¡ä»¶ã¾ã¨ã‚
   const radioConditions = {
-    // “s“¹•{Œ§‚©s­‹æ‚©«•Ê‚©”N—î‘w‚©E‹Æ‚©¥ˆ÷ó‘Ô
+    // éƒ½é“åºœçœŒã‹è¡Œæ”¿åŒºã‹æ€§åˆ¥ã‹å¹´é½¢å±¤ã‹è·æ¥­ã‹å©šå§»çŠ¶æ…‹
     something: new RegExp(
       cityName +
         "|" +
@@ -166,7 +166,7 @@ function SurveyHelpers(myInfo, settings) {
         gender +
         "|" +
         ageRange +
-        ".*[`|‘ã](?!–¢–ž)" +
+        ".*[ï½ž|ä»£](?!æœªæº€)" +
         "|" +
         "(" +
         jobRegExp +
@@ -176,17 +176,17 @@ function SurveyHelpers(myInfo, settings) {
     ),
   };
 
-  // 1‚Â‘O‚É’Tõ‚µ‚½ƒ‰ƒWƒIƒ{ƒ^ƒ“‚Ìî•ñ‚ðT‚¦‚Ä‚¨‚­ : ‚æ‚èƒ‰ƒWƒIƒ{ƒ^ƒ“‚É‹ß‚¢ŠK‘w‚ÅŠY“–€–Ú‚ðŒ©•t‚¯‚½•û‚ð—Dæ‚³‚¹‚é‚½‚ß
+  // 1ã¤å‰ã«æŽ¢ç´¢ã—ãŸãƒ©ã‚¸ã‚ªãƒœã‚¿ãƒ³ã®æƒ…å ±ã‚’æŽ§ãˆã¦ãŠã : ã‚ˆã‚Šãƒ©ã‚¸ã‚ªãƒœã‚¿ãƒ³ã«è¿‘ã„éšŽå±¤ã§è©²å½“é …ç›®ã‚’è¦‹ä»˜ã‘ãŸæ–¹ã‚’å„ªå…ˆã•ã›ã‚‹ãŸã‚
   const radioPrev = {
     name: "",
     loop: -1,
   };
 
-  // Type ‚ª radio ‚Ì—v‘f‚ð’Tõ‚·‚é
+  // Type ãŒ radio ã®è¦ç´ ã‚’æŽ¢ç´¢ã™ã‚‹
   Array.prototype.forEach.call(
     document.querySelectorAll("[type=radio]"),
     (radio) => {
-      // ˆÙ‚È‚éƒ‰ƒWƒIƒ{ƒ^ƒ“ŒQ‚ªo‚Ä‚«‚½‚çA’¼‘O‚É’Tõ‚µ‚½ƒ‰ƒWƒIƒ{ƒ^ƒ“‚Ìî•ñ‚ðƒŠƒZƒbƒg‚·‚é
+      // ç•°ãªã‚‹ãƒ©ã‚¸ã‚ªãƒœã‚¿ãƒ³ç¾¤ãŒå‡ºã¦ããŸã‚‰ã€ç›´å‰ã«æŽ¢ç´¢ã—ãŸãƒ©ã‚¸ã‚ªãƒœã‚¿ãƒ³ã®æƒ…å ±ã‚’ãƒªã‚»ãƒƒãƒˆã™ã‚‹
       if (
         radioPrev.name !== "" &&
         radioPrev.loop !== -1 &&
@@ -196,29 +196,29 @@ function SurveyHelpers(myInfo, settings) {
         radioPrev.loop = -1;
       }
 
-      // e—v‘f‚É‘k‚Á‚Ä‚¢‚­‚½‚ß‚Ì•Ï”
+      // è¦ªè¦ç´ ã«é¡ã£ã¦ã„ããŸã‚ã®å¤‰æ•°
       let parent = radio;
-      // e—v‘f‚ð‘k‚Á‚Ä‚Ì’Tõ‚ªÏ‚ñ‚Å‚¢‚é‚±‚Æ‚ðŽ¦‚·ƒtƒ‰ƒO
+      // è¦ªè¦ç´ ã‚’é¡ã£ã¦ã®æŽ¢ç´¢ãŒæ¸ˆã‚“ã§ã„ã‚‹ã“ã¨ã‚’ç¤ºã™ãƒ•ãƒ©ã‚°
       let finished = false;
 
-      // e—v‘f‚ð‘k‚é
+      // è¦ªè¦ç´ ã‚’é¡ã‚‹
       for (let i = 0; i < loop; i++) {
-        // ’TõÏ‚È‚ç’†’f‚·‚é
+        // æŽ¢ç´¢æ¸ˆãªã‚‰ä¸­æ–­ã™ã‚‹
         if (finished) {
           continue;
         }
 
-        // e—v‘f‚Ì innerHTML ‚ðŽæ“¾‚·‚é
+        // è¦ªè¦ç´ ã® innerHTML ã‚’å–å¾—ã™ã‚‹
         parent = parent.parentNode;
         let innerHTML = parent.innerHTML;
 
-        // ‚»‚Ìƒ‰ƒWƒIƒ{ƒ^ƒ“ŒQ‚Å‰‚ß‚Ä‚Ìê‡‚©A‚æ‚è‹ß‚¢ƒ‰ƒWƒIƒ{ƒ^ƒ“‚ðŒ©•t‚¯‚½‚ç
+        // ãã®ãƒ©ã‚¸ã‚ªãƒœã‚¿ãƒ³ç¾¤ã§åˆã‚ã¦ã®å ´åˆã‹ã€ã‚ˆã‚Šè¿‘ã„ãƒ©ã‚¸ã‚ªãƒœã‚¿ãƒ³ã‚’è¦‹ä»˜ã‘ãŸã‚‰
         if (
           radioConditions.something.test(innerHTML) &&
           ((radioPrev.name === "" && radioPrev.loop === -1) ||
             (radio.name === radioPrev.name && i < radioPrev.loop))
         ) {
-          // ’Tõ‚µ‚½ƒ‰ƒWƒIƒ{ƒ^ƒ“‚Ìî•ñ‚Æ‚µ‚Ä“o˜^‚µ‚Ä‚¨‚­
+          // æŽ¢ç´¢ã—ãŸãƒ©ã‚¸ã‚ªãƒœã‚¿ãƒ³ã®æƒ…å ±ã¨ã—ã¦ç™»éŒ²ã—ã¦ãŠã
           radioPrev.name = radio.name;
           radioPrev.loop = i;
           radio.checked = true;
